@@ -1,6 +1,6 @@
 import express, { Request, Response} from 'express';
 
-import { getWeather } from './resolvers';
+import { getWeather, locationToCoordinatesResolver } from './resolvers';
 import { WeatherPrediction } from './types';
 
 const router = express.Router();
@@ -19,5 +19,7 @@ router.get('/weather', (req: Request, res: Response) => {
     }
   });  
 });
+
+router.get('/location', locationToCoordinatesResolver);
 
 export default router;

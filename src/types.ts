@@ -20,3 +20,18 @@ type dayPrediction = {
     |'humidday'|'humidnight'|'lightrainday'|'lightrainnight'|'oshowerday'|'oshowernight'|'ishowerday'|'ishowernight'
     |'lightsnowday'|'lightsnownight'|'rainday'|'rainnight'|'snowday'|'snownight'|'rainsnowday'|'rainsnownight'
 };
+
+export type LocationResult = {
+  place_id: string,
+  license: string,
+  osm_type: 'node'|'way'|'relation',
+  osm_id: string,
+  bounding_box: string[],
+  lat: string,
+  lon: string,
+  display_name: string,
+  class: string,
+  type: string,
+  importance: number,
+  icon?: string
+};
